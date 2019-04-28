@@ -8,12 +8,10 @@ Touch an empty `ssh` file in the root of the sdcard
 Update hostname:
 `hostnamectl set-hostname hydra-node3`
 
-Generate ssh key pair:
-`ssh-keygen -t rsa -b 4096 -C "ubuntu@hydra-node3"`
+Copy ssh key to authorized keys
 
-`cat ~/.ssh/id_rsa >> ~/.ssh/authorized_hosts`
-
-Reduce gpu memory by adding to `/boot/firmware/config.txt`:
+Reduce gpu memory by adding to `/boot/firmware/config.txt` (unfortuately it's impossible to take all memory away from the GPU,
+16M is as low as it can go):
 ```
 gpu_mem=16
 ```

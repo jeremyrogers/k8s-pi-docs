@@ -10,13 +10,13 @@ Update hostname:
 
 Copy ssh key to authorized keys
 
-Reduce gpu memory by adding to `/boot/firmware/config.txt` (unfortuately it's impossible to take all memory away from the GPU,
+Reduce gpu memory by adding to `/boot/firmware/usercfg.txt` (unfortunately it's impossible to take all memory away from the GPU,
 16M is as low as it can go):
 ```
 gpu_mem=16
 ```
 
-Enable CPU and Memory Cgroups by adding to `/boot/firmware/cmdline.txt`:
+Enable CPU and Memory Cgroups by adding to `/boot/firmware/nobtcmd.txt`
 ```
 cgroup_enable=cpuset cgroup_enable=memory cgroup_memory=1
 ```
